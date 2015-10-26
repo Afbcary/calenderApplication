@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tSI-vK-0l7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dd2-Sg-1t3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--Week Table View-->
         <scene sceneID="DoP-6E-wpa">
             <objects>
-                <tableViewController id="tSI-vK-0l7" customClass="weekTableView" sceneMemberID="viewController">
+                <tableViewController id="tSI-vK-0l7" customClass="weekTableView" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mtc-Uw-5ek">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
                                     <constraint firstAttribute="height" priority="998" constant="400" id="u7T-7M-xUZ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cd6-TT-duL" customClass="eventCell" customModule="Calendar" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="twoCell" id="cd6-TT-duL" customClass="eventCell" customModule="Calendar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="400" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cd6-TT-duL" id="wLr-Ps-4xe">
@@ -237,6 +237,9 @@
                             <constraint firstItem="Cu0-BG-Psg" firstAttribute="top" secondItem="viW-13-WSr" secondAttribute="bottom" priority="999" constant="10" id="zF6-mQ-Lid"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayEventTableInDay" destination="zKC-2C-w5o" id="lqa-il-y9T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwt-Ur-Olf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,9 +258,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="8TK-W9-fEe">
-                                <rect key="frame" x="32" y="106" width="536" height="31"/>
+                                <rect key="frame" x="98" y="106" width="404" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="532" id="ete-yO-Zai"/>
+                                    <constraint firstAttribute="width" priority="995" constant="400" id="Bt8-cN-sxt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="997" constant="300" id="ete-yO-Zai"/>
                                     <constraint firstAttribute="height" constant="30" id="pjX-tH-leD"/>
                                 </constraints>
                                 <connections>
@@ -265,20 +269,21 @@
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="DT4-qo-SRU">
-                                <rect key="frame" x="32" y="187" width="536" height="31"/>
+                                <rect key="frame" x="98" y="187" width="404" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7dD-Hu-CQP"/>
-                                    <constraint firstAttribute="width" constant="532" id="B2D-sU-s9h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="997" constant="300" id="B2D-sU-s9h"/>
+                                    <constraint firstAttribute="width" priority="995" constant="400" id="Mme-QW-yvD"/>
                                 </constraints>
                                 <connections>
                                     <action selector="minuteSliderAction:" destination="hbF-0u-yze" eventType="valueChanged" id="s2Z-1i-UOd"/>
                                 </connections>
                             </slider>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbb-cw-YSl">
-                                <rect key="frame" x="34" y="25" width="532" height="30"/>
+                                <rect key="frame" x="150" y="25" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8rr-Uc-x5W"/>
-                                    <constraint firstAttribute="width" constant="532" id="eMT-Rr-0YU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="997" constant="300" id="eMT-Rr-0YU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -322,6 +327,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Sbb-cw-YSl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1nI-Wd-ZK9" secondAttribute="leadingMargin" id="2bC-27-pQa"/>
                             <constraint firstItem="KWU-Sg-qAu" firstAttribute="top" secondItem="DT4-qo-SRU" secondAttribute="bottom" constant="35" id="41g-A5-DZv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rsj-bG-qr2" secondAttribute="trailing" constant="30" id="59A-Hx-UK9"/>
                             <constraint firstItem="mha-qs-faa" firstAttribute="top" secondItem="8TK-W9-fEe" secondAttribute="bottom" constant="20" id="Bim-ly-xpn"/>
@@ -332,9 +338,11 @@
                             <constraint firstItem="Sbb-cw-YSl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Slf-ta-r5r" secondAttribute="bottom" constant="4" id="VwW-RX-pdl"/>
                             <constraint firstItem="KWU-Sg-qAu" firstAttribute="leading" secondItem="1nI-Wd-ZK9" secondAttribute="leadingMargin" constant="30" id="Wt3-mV-L5s"/>
                             <constraint firstItem="8TK-W9-fEe" firstAttribute="centerX" secondItem="1nI-Wd-ZK9" secondAttribute="centerX" id="bSN-dS-WwJ"/>
+                            <constraint firstItem="DT4-qo-SRU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1nI-Wd-ZK9" secondAttribute="leadingMargin" id="kbC-2s-PjG"/>
                             <constraint firstItem="DT4-qo-SRU" firstAttribute="top" secondItem="mha-qs-faa" secondAttribute="bottom" constant="10" id="o20-9S-JrQ"/>
                             <constraint firstItem="DT4-qo-SRU" firstAttribute="centerX" secondItem="1nI-Wd-ZK9" secondAttribute="centerX" id="oGa-EL-Jq6"/>
                             <constraint firstItem="mha-qs-faa" firstAttribute="centerX" secondItem="1nI-Wd-ZK9" secondAttribute="centerX" id="tek-gG-qxd"/>
+                            <constraint firstItem="8TK-W9-fEe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1nI-Wd-ZK9" secondAttribute="leadingMargin" id="vPY-Dl-p31"/>
                             <constraint firstItem="Sbb-cw-YSl" firstAttribute="centerX" secondItem="1nI-Wd-ZK9" secondAttribute="centerX" id="vS3-hX-kbs"/>
                             <constraint firstItem="8TK-W9-fEe" firstAttribute="top" secondItem="71n-2B-Tjj" secondAttribute="bottom" constant="10" id="xyZ-i8-nt7"/>
                         </constraints>
@@ -353,6 +361,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YQY-Wk-MbC"/>
+        <segue reference="teS-1p-qi7"/>
     </inferredMetricsTieBreakers>
 </document>

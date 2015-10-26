@@ -17,4 +17,8 @@ class dayView : UIViewController {
     
     @IBAction func newEventButton(sender: UIButton) {
     }
+    
+    
+    @IBOutlet weak var dayEventTableInDay: dayEventTable!
+    
 }
