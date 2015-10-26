@@ -1,5 +1,5 @@
 //
-//  weekTableCell.swift
+//  eventCell.swift
 //  Calendar
 //
 //  Created by Emily Greinwald on 10/25/15.
@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 
-class weekTableCell : UITableViewCell {
-    
+class eventCell : UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization
+    }
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    
+    @IBAction func viewEventButton(sender: UIButton) {
     }
     
-    @IBOutlet weak var dayLabel: UILabel!
     
-    @IBAction func viewDayButton(sender: UIButton) {
-    }
     
 }

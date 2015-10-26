@@ -13,7 +13,21 @@ class weekTableView : UITableViewController {
     
     var days = ["Previous" , "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Next"]
     
-    var dayNumbers = []
+    var dayNumbers = [Int]()
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for index in 1...31 {
+            self.dayNumbers.append(index)
+        }
+        
+    }
+    
+    
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
