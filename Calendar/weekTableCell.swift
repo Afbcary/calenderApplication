@@ -20,6 +20,7 @@ class weekTableCell : UITableViewCell {
     
     @IBOutlet weak var dayLabel: UILabel!
     
+    
     @IBAction func viewDayButton(sender: UIButton) {
         cModel.currentDay = self.dayNum
     }

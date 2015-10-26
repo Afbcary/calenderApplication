@@ -11,19 +11,16 @@ import UIKit
 
 class weekTableView : UITableViewController {
     
-    var days = ["Previous" , "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" , "Next"]
+    var days = [ "Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday" ]
     
-    var dayNumbers = [Int]()
     
-    var cModel = calendarModel()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for index in 1...31 {
-            self.dayNumbers.append(index)
-        }
+       
         
     }
     
@@ -35,7 +32,7 @@ class weekTableView : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 7
     }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
