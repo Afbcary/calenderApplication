@@ -15,7 +15,13 @@ class dayView : UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var testEvents = cModel.days[cModel.currentDay].Events
+        if testEvents.count > 0 {
+       print(testEvents[0].title)
+        }
+        else {
+            print("no events")
+        }
     }
     
     @IBAction func backButton(sender: UIButton) {
@@ -29,7 +35,10 @@ class dayView : UIViewController {
     @IBOutlet weak var dayEventTableInDay: dayEventTable!
     
        
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        dayEventTableInDay.reloadData()
+    }
     
     
 }

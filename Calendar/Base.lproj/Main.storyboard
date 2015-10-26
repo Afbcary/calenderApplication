@@ -283,7 +283,7 @@
                                 <state key="normal" title="Submit Event"/>
                                 <connections>
                                     <action selector="submitEventButton:" destination="hbF-0u-yze" eventType="touchUpInside" id="bxN-A2-kzw"/>
-                                    <segue destination="dd2-Sg-1t3" kind="show" id="teS-1p-qi7"/>
+                                    <segue destination="dd2-Sg-1t3" kind="show" identifier="submitEventSeg" id="teS-1p-qi7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWU-Sg-qAu">
@@ -351,6 +351,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gxz-Mq-uPR"/>
+        <segue reference="teS-1p-qi7"/>
     </inferredMetricsTieBreakers>
 </document>

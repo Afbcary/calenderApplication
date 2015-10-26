@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class eventView : UIViewController {
+    var eventNum = 0
     
     @IBAction func eventToDayButton(sender: UIButton) {
     }

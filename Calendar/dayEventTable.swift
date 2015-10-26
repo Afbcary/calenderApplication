@@ -11,7 +11,9 @@ import UIKit
 
 class dayEventTable : UITableView {
     
+   
     
+    var thisDay = cModel.days[cModel.currentDay]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,9 +27,12 @@ class dayEventTable : UITableView {
     
     override func cellForRowAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell? {
         let cell = self.dequeueReusableCellWithIdentifier("twoCell", forIndexPath: indexPath) as! eventCell
-        let thisDay = cModel.days[indexPath.row]
-        cell.timeLabel.text = String(floor(Float(thisDay.time)/60.0)) + " hours, " + String(thisDay.time%60) + " minutes"
-        cell.titleLabel.text = thisDay.title
+        let thisEvent = thisDay.Events[indexPath.row]
+        cell.timeLabel.text = String(floor(Float(thisEvent.time)/60.0)) + " hours, " + String(thisEvent.time%60) + " minutes"
+        cell.titleLabel.text = thisEvent.title
         return cell
     }
+    
+    
+    
 }

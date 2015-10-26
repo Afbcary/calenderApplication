@@ -40,13 +40,22 @@ class createNewEventViewController : UIViewController {
     }
     @IBAction func submitEventButton(sender: UIButton) {
     //create a new event using the information on the page
-        cModel.days[cModel.currentDay].newEvent(eventTitleField.text!, time: Int(hourSlider.value*60 + minuteSlider.value))
-        resetFields()
+    cModel.days[cModel.currentDay].newEvent(eventTitleField.text!, time: Int(hourSlider.value*60 + minuteSlider.value))
+        
+        
     }
     
     func resetFields() {
         eventTitleField.text = ""
         hourSlider.value = 12.0
         minuteSlider.value = 30.0
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "submitEventSeg")
+        {
+          
+            
+        }
     }
 }
