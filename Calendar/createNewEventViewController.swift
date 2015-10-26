@@ -36,16 +36,17 @@ class createNewEventViewController : UIViewController {
     @IBAction func cancelButton(sender: UIButton) {
     //don't create a new event
     //reset the information
-    eventTitleField.text = ""
-    hourSlider.value = 12.0
-    minuteSlider.value = 30.0
+    resetFields()
     }
     @IBAction func submitEventButton(sender: UIButton) {
     //create a new event using the information on the page
-        var curr : day = dayEventTable.days[dayEventTable.currentDay]
-        
+        cModel.days[cModel.currentDay].newEvent(eventTitleField.text!, time: Int(hourSlider.value*60 + minuteSlider.value))
+        resetFields()
+    }
     
-        
-    
+    func resetFields() {
+        eventTitleField.text = ""
+        hourSlider.value = 12.0
+        minuteSlider.value = 30.0
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+var cModel = calendarModel()
 
 class dayView : UIViewController {
     
@@ -28,16 +28,7 @@ class dayView : UIViewController {
     
     @IBOutlet weak var dayEventTableInDay: dayEventTable!
     
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        if segue!.identifier == "createNewEventSeg" {
-            let viewController  = segue!.destinationViewController as! createNewEventViewController
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            viewController.cModel = dayEventTable.cModel
-            
-        }
-        
-    }
-    
+       
     
     
     

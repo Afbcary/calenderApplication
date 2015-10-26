@@ -11,6 +11,8 @@ import UIKit
 
 class weekTableCell : UITableViewCell {
     
+   var dayNum = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +21,7 @@ class weekTableCell : UITableViewCell {
     @IBOutlet weak var dayLabel: UILabel!
     
     @IBAction func viewDayButton(sender: UIButton) {
+        cModel.currentDay = self.dayNum
     }
     
 }

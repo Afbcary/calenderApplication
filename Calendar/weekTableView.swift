@@ -42,6 +42,7 @@ class weekTableView : UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as! weekTableCell
         
         cell.dayLabel.text = self.days[indexPath.row]
+        cell.dayNum = indexPath.row
             return cell
     }
     
