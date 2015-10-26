@@ -11,6 +11,8 @@ import UIKit
 
 class createNewEventViewController : UIViewController {
     
+    var cModel = calendarModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,9 +36,15 @@ class createNewEventViewController : UIViewController {
     @IBAction func cancelButton(sender: UIButton) {
     //don't create a new event
     //reset the information
+    eventTitleField.text = ""
+    hourSlider.value = 12.0
+    minuteSlider.value = 30.0
     }
     @IBAction func submitEventButton(sender: UIButton) {
     //create a new event using the information on the page
+        var curr : day = dayEventTable.days[dayEventTable.currentDay]
+        
+    
         
     
     }

@@ -22,6 +22,7 @@
 		8EB666051BDDCF7B00C9AAD3 /* createNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB666041BDDCF7B00C9AAD3 /* createNewEventViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB666071BDDD74500C9AAD3 /* eventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB666061BDDD74500C9AAD3 /* eventView.swift */; settings = {ASSET_TAGS = (); }; };
 		8EB666091BDDD9D900C9AAD3 /* eventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB666081BDDD9D900C9AAD3 /* eventCell.swift */; settings = {ASSET_TAGS = (); }; };
+		8EB6660B1BDE94D900C9AAD3 /* calendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6660A1BDE94D900C9AAD3 /* calendarModel.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		8EB666041BDDCF7B00C9AAD3 /* createNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createNewEventViewController.swift; sourceTree = "<group>"; };
 		8EB666061BDDD74500C9AAD3 /* eventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventView.swift; sourceTree = "<group>"; };
 		8EB666081BDDD9D900C9AAD3 /* eventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventCell.swift; sourceTree = "<group>"; };
+		8EB6660A1BDE94D900C9AAD3 /* calendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				8EB666041BDDCF7B00C9AAD3 /* createNewEventViewController.swift */,
 				8EB666021BDDC83800C9AAD3 /* dayEventTable.swift */,
 				8EB666001BDDC7F700C9AAD3 /* dayView.swift */,
+				8EB6660A1BDE94D900C9AAD3 /* calendarModel.swift */,
 				8EB665FA1BDDB37000C9AAD3 /* weekTableCell.swift */,
 				8EB665FC1BDDB3CE00C9AAD3 /* day.swift */,
 				8EB665FE1BDDBFBC00C9AAD3 /* event.swift */,
@@ -284,6 +287,7 @@
 				8EB665FD1BDDB3CE00C9AAD3 /* day.swift in Sources */,
 				8EB665F91BDDB1C900C9AAD3 /* weekTableView.swift in Sources */,
 				8EB666071BDDD74500C9AAD3 /* eventView.swift in Sources */,
+				8EB6660B1BDE94D900C9AAD3 /* calendarModel.swift in Sources */,
 				8EB666051BDDCF7B00C9AAD3 /* createNewEventViewController.swift in Sources */,
 				8EB666091BDDD9D900C9AAD3 /* eventCell.swift in Sources */,
 				8EB666031BDDC83800C9AAD3 /* dayEventTable.swift in Sources */,

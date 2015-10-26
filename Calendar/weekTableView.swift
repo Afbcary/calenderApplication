@@ -15,6 +15,7 @@ class weekTableView : UITableViewController {
     
     var dayNumbers = [Int]()
     
+    var cModel = calendarModel()
     
     
     override func viewDidLoad() {

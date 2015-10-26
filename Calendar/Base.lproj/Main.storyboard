@@ -160,7 +160,7 @@
                                 <state key="normal" title="Create New Event"/>
                                 <connections>
                                     <action selector="newEventButton:" destination="dd2-Sg-1t3" eventType="touchUpInside" id="Ch1-AB-Zn4"/>
-                                    <segue destination="hbF-0u-yze" kind="show" id="coy-Rc-kSK"/>
+                                    <segue destination="hbF-0u-yze" kind="show" identifier="createNewEventSeg" id="coy-Rc-kSK"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zKC-2C-w5o" customClass="dayEventTable" customModule="Calendar" customModuleProvider="target">
@@ -357,10 +357,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7n-Dd-0R6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="-443"/>
+            <point key="canvasLocation" x="1275" y="-443"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="teS-1p-qi7"/>
+        <segue reference="hTS-ET-P2M"/>
     </inferredMetricsTieBreakers>
 </document>
